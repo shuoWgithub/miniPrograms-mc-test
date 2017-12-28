@@ -1,0 +1,26 @@
+<view class="page-body">
+    <scroll-view class="art-categories-scroll-view" scroll-x="true">
+        <view class="art-categories-cell  {{selectId == item.id ? 'categories-selected' : ''}}" wx:for="{{artCategories}}"  wx:key="uuid()">
+            <text>{{item.title}}</text>
+        </view>
+    </scroll-view>
+    <scroll-view class="art-styleSeries-scroll-view" scroll-x="true">
+        <view class="art-styleSeries-cell" wx:for="{{artCategories[0].styleSeries}}"  wx:key="uuid()">
+            <text>{{item}}</text>
+        </view>
+    </scroll-view>
+    <view class="style-series-waterfall">
+        <view class="img_item" wx:for="{{[col1, col2]}}" wx:key="index">
+            <view wx:for="{{item}}" wx:key="id">
+                <image src="{{item.pic}}" style="width:100%; height:{{item.height}}px;"></image>
+                <view class="artifact_name"><text>持曼陀林琴的少</text></view>
+                <view class="artifact_teacher">画布精选</view>
+                <view class="artifact_info">画布精选 </view>
+            </view>
+        </view>
+        <view class="loading-view">{{pageToEnd ? '到底了' : '加载中...'}}</view>
+    </view>
+    <view style="display:none">
+        <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.pic}}" bindload="onImageLoad"></image>
+    </view>
+</view>

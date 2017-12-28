@@ -1,0 +1,45 @@
+
+<view class="page-body">
+    <!--banner-->
+    <view class="page-section-spacing swiper">
+        <swiper indicator-dots="{{indicatorDots}}"
+                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{background}}" wx:key="{{item.uuid}}">
+                <swiper-item>
+                    <image class="swiper-item" mode="aspectFill" src="{{item.url}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">
+            <text>艺术品分类</text>
+        </view>
+        <view class="artifact-classify">
+            <view wx:for="{{background}}" wx:key="{{item.uuid}}" class="artifact-classify-scroll-view {{background.length % 2 == 1 ? 'artifact-classify-longe' : ''}}">
+                <image class="artifact-classify-item-image" mode="aspectFill" src="{{item.url}}"></image>
+                <view class="artifact-classify-name"><text>绘画</text></view>
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">
+            <text>画布精选</text>
+        </view>
+        <view class="page-section-spacing">
+            <scroll-view class="scroll-view_H" scroll-x="true">
+                <view wx:for="{{background}}" wx:key="{{item.uuid + 1}}" class="scroll-view-item_H">
+                    <image class="scroll-view-item-image" mode="aspectFill" src="{{item.url}}"></image>
+                    <view class="artifact_name"><text>画布精选</text></view>
+                    <view class="artifact_teacher">画布精选</view>
+                    <view class="artifact_info">画布精选</view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="private-order">
+        <text>不知道哪个艺术平更适合\n你的空间?</text>
+        <text>留下信息, 空间艺术顾问会提供专属方案</text>
+        <button bindtap="" >立即定制</button>
+    </view>
+</view>

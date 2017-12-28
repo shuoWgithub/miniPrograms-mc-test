@@ -1,0 +1,93 @@
+
+<view class="page-body">
+<!--banner-->
+    <view class="page-section page-section-spacing swiper">
+        <swiper indicator-dots="{{indicatorDots}}"
+                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{background}}" wx:key="{{item.uuid}}">
+                <swiper-item>
+                    <image class="swiper-item" mode="aspectFill" src="{{item.url}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+<!--画布精选-->
+    <view class="page-section">
+        <view class="page-section-title">
+            <text>画布精选</text>
+        </view>
+        <view class="page-section-spacing">
+            <scroll-view class="scroll-view_H" scroll-x="true">
+                <view wx:for="{{background}}" wx:key="{{item.uuid + 1}}" class="scroll-view-item_H">
+                    <image class="scroll-view-item-image" mode="aspectFill" src="{{item.url}}"></image>
+                    <view class="artifact_name"><text>画布精选</text></view>
+                    <view class="artifact_teacher">画布精选</view>
+                    <view class="artifact_info">画布精选</view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+<!--风格系列-->
+    <view class="style-series">
+        <view class="page-section-title">
+            <text>风格系列</text>
+            <view>
+                <text  wx:for="{{styleSeries}}"  wx:key="item.id" class="style-series-cell {{item.id == currentStyleSeriesId? 'style-black' : null}}"  bindtap="selectStyleSeries" data-id="{{item.id}}" >{{item.name}}</text>
+            </view>
+        </view>
+        <view class="style-series-waterfall">
+            <view class="img_item" wx:for="{{[col1, col2]}}" wx:key="index">
+                <view wx:for="{{item}}" wx:key="id">
+                    <image src="{{item.pic}}" style="width:100%;height:{{item.height}}px;"></image>
+                    <view class="artifact_name"><text>持曼陀林琴的少女</text></view>
+                    <view class="artifact_teacher">画布精选</view>
+                    <view class="artifact_info">画布精选 </view>
+                </view>
+                <view class="add-more-artifact" wx:if="{{index == shortCol}}" bindtap="loadImages">加载更多</view>
+            </view>
+        </view>
+        <view style="display:none">
+            <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.pic}}" bindload="onImageLoad"></image>
+        </view>
+    </view>
+<!--艺术家-->
+    <view class="page-artict">
+        <view class="page-section-title">
+            <text>艺术家</text>
+            <image src="../../images/icon_more.png"></image>
+        </view>
+        <view>
+            <view wx:for="{{artistList}}" wx:key="item.userId" class="artict-cell">
+                <view class="artist-info">
+                    <view>
+                        <image class="avatar" mode="aspectFill" src="{{item.avatar}}"></image>
+                        <view>
+                            <view class="artist-name">{{item.name}}</view>
+                            <view class="artist-artifact">76件作品，20件共享</view>
+                        </view>
+                    </view>
+                    <button bindtap="" disabled="{{false}}">关注</button>
+                </view>
+                <view class="artist-artifact">
+                    <image wx:for="{{item.list}}" mode="aspectFill"  wx:for-item="artifact" wx:key="artifact.id" src="{{artifact.url}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="artifact-classify">
+        <view class="page-section-title">
+            <text>艺术品分类</text>
+            <image src="../../images/icon_more.png"></image>
+        </view>
+        <view>
+            <scroll-view class="scroll-view_H" scroll-x="true">
+
+            </scroll-view>
+        </view>
+    </view>
+</view>
+
+
+
+

@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["pages/demo/demo.xml"],"sourcesContent":["<import src=\"../../components/mc-tab-bar/index\"/>\n\n<template is=\"tabbar\" data=\"{{tabbar}}\"/>\n\n<view class=\"container\">\n  <text class=\"title\">{{ title }}</text>\n  <text class=\"title\">{{ fromDate }}</text>\n</view>\n"],"file":"demo.wxml"}
