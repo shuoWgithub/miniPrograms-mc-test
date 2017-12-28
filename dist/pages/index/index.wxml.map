@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["pages/index/index.xml"],"sourcesContent":["\n<view class=\"container\">\n  <view >\n    <image src=\"\"></image>\n    <image src=\"\"></image>\n    <image src=\"\"></image>\n    <image src=\"\"></image>\n  </view>\n  <view>\n\n  </view>\n</view>\n\n\n"],"file":"index.wxml"}

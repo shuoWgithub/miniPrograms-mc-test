@@ -1,8 +1,0 @@
-<import src="../../components/mc-tab-bar/index"/>
-
-<template is="tabbar" data="{{tabbar}}"/>
-
-<view class="container">
-  <text class="title">{{ title }}</text>
-  <text class="title">{{ fromDate }}</text>
-</view>
