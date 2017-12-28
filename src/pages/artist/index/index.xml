@@ -5,7 +5,24 @@
         </view>
     </scroll-view>
     <view>
-        <view></view>
-
+        <view wx:for="{{artictList}}"  wx:key="uuid()">
+            <view class="artist-info">
+                <view>
+                    <image class="avatar" mode="aspectFill" src="{{item.avatar}}"></image>
+                    <view>
+                        <view class="artist-name">{{item.name}}</view>
+                        <view class="artist-artifact">76件作品，20件共享</view>
+                    </view>
+                </view>
+                <button class="mc-background-black mc-text-white" bindtap="" disabled="{{false}}">关注</button>
+            </view>
+            <scroll-view class="artifact-scroll-view" scroll-x="true">
+                <view wx:for="{{item.list}}" wx:for-item="artifact" wx:key="uuid()" class="scroll-view-item-cell">
+                    <image class="scroll-view-item-image" mode="aspectFill" src="{{artifact.url}}"></image>
+                    <view class="artifact_name"><text>画布精选</text></view>
+                    <view class="artifact_info">画布精选</view>
+                </view>
+            </scroll-view>
+        </view>
     </view>
 </view>

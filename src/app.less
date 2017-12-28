@@ -3,6 +3,7 @@
 
 page {
   display: flex;
+  font-size: 14px;
   flex-direction: column;
   height: 100%;
   width: 100%;
@@ -17,4 +18,131 @@ page {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+}
+
+/*background*/
+.mc-background-black{
+  background-color: #000000;
+}
+.mc-background-white{
+  background-color: #FFFFFF;
+}
+.mc-background-gray{
+  background-color: #f8f8f8;
+}
+
+.mc-background-smoke{
+  background-color: #9A9A9A ;
+}
+
+/* text */
+.mc-text-white{
+  color: #FFFFFF;
+}
+.mc-text-gary{
+  color: #9A9A9A ;
+}
+
+/* fontsize */
+.mc-text-font-tiny {
+  font-size: 10px;
+}
+.mc-text-font-small {
+  font-size: 12px;
+}
+.mc-text-font-regular {
+  font-size: 14px;
+}
+.mc-text-font-middle {
+  font-size: 16px;
+}
+.mc-text-font-big {
+  font-size: 18px;
+}
+.mc-text-font-little-big {
+  font-size: 20px;
+}
+.mc-text-font-too-big {
+  font-size: 22px;
+}
+.mc-text-font-too-big-more {
+  font-size: 24px;
+}
+/* bold*/
+.mc-text-inherit {
+  font-weight: inherit;
+}
+.mc-text-bolder {
+  font-weight: bolder;
+}
+.mc-text-bold {
+  font-weight: bold;
+}
+
+/*position*/
+.mc-position-absolute{
+  position: absolute;
+}
+.mc-position-relative{
+  position: relative;
+}
+.mc-position-fixed{
+  position: fixed;
+}
+
+/*basic*/
+
+.mc-vertical-middle {
+  vertical-align: middle !important;
+}
+.mc-vertical-top {
+  vertical-align: top !important;
+}
+.mc-vertical-bottom {
+  vertical-align: bottom !important;
+}
+.mc-text-align-center {
+  text-align: center !important;
+}
+.mc-text-align-left {
+  text-align: left !important;
+}
+.mc-text-align-right {
+  text-align: right !important;
+}
+.mc-text-nowrap {
+  white-space: nowrap;
+}
+
+/*ovrflow*/
+.mc-overflow-hidden{
+  overflow: hidden;
+}
+
+/*float*/
+.mc-float-left{
+  float: left;
+}
+.mc-float-right{
+  float: right;
+}
+
+/*card*/
+.mc-card {
+  box-shadow: 0 3px 15px rgba(180, 180, 180, 0.5);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/*input样式*/
+.mc-clean-input{
+  border:none; outline:none; resize: none;
+  -webkit-appearance:none;
+}
+
+/*字体超出长度后隐藏*/
+.mc-text-width-scope{
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
