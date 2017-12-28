@@ -1,0 +1,11 @@
+<view>
+    <scroll-view class="art-styleSeries-scroll-view" scroll-x="true">
+        <view class="art-styleSeries-cell" wx:for="{{styleSeries}}"  wx:key="uuid()">
+            <text>{{item}}</text>
+        </view>
+    </scroll-view>
+    <view>
+        <view></view>
+
+    </view>
+</view>

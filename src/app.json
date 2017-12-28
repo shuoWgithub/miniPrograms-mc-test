@@ -3,6 +3,7 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
+    "pages/artist/index/index",
     "pages/artifact/index/index",
     "pages/discover/index/index",
     "pages/index/index",
@@ -54,7 +55,7 @@
       },
       {
         "text": "艺术家",
-        "pagePath": "pages/__demo/demo",
+        "pagePath": "pages/artist/index/index",
         "iconPath": "/images/btn_artist.png",
         "selectedIconPath": "/images/btn_artist_HL.png"
       },
