@@ -44,4 +44,4 @@ jspm_packages
 *.iml
 **/node_modules
 **/logs
-**/conf_local_custom.js
+**/dist
