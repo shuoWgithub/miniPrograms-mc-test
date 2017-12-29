@@ -5,8 +5,10 @@
   "pages": [
     "pages/personal/updatePhoto/index",
     "pages/personal/follow/index",
+    "pages/artist/artist_detial/index",
+    "pages/artist/index/index",
     "pages/artifact/index/index",
-    "pages/discover/index",
+    "pages/discover/index/index",
     "pages/index/index",
     "pages/__demo/demo"
     // Dont remove this comment

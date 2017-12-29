@@ -179,3 +179,32 @@ page {
   white-space: nowrap;
   overflow: hidden;
 }
+
+.ar-animation-up-show {
+  animation: moveShow .7s ease;
+  -webkit-animation: moveShow .7s ease;
+  -o-animation: moveShow .7s ease;
+  -ms-animation: moveShow .7s ease;
+  -moz-animation: moveShow .7s ease;
+  transform:translate(0, -100%)!important;
+  -webkit-transform: translate(0, -100%)!important;
+  -o-transform: translate(0, -100%)!important;
+  -ms-transform: translate(0, -100%)!important;
+  -moz-transform: translate(0, -100%)!important;
+}
+@-webkit-keyframes moveShow {
+  from {
+    transform: translate(0, 0%);
+    -webkit-transform: translate(0, 0%);
+    -o-transform: translate(0, 0%);
+    -ms-transform: translate(0, 0%);
+    -moz-transform: translate(0, 0%);
+  }
+  to {
+    transform: translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+  }
+}

@@ -24,5 +24,6 @@
                 </view>
             </scroll-view>
         </view>
+        <view class="loading-view">{{pageToEnd ? '到底了' : '加载中...'}}</view>
     </view>
 </view>
