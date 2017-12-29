@@ -19,7 +19,7 @@ Page({
     this.setData({fromDate: app.util.formatDate(new Date(), 'yyyy.MM.dd')})
 
     // 调用函数
-    app.editTabBar()
+    // app.editTabBar()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

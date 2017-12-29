@@ -7,7 +7,7 @@
     "pages/artifact/index",
     "pages/discover/index",
     "pages/index/index",
-    "pages/demo/demo"
+    "pages/__demo/demo"
     // Dont remove this comment
   ],
   // Window configuration
@@ -43,25 +43,25 @@
     "list": [
       {
         "text": "发现",
-        "pagePath": "pages/discover/index",
+        "pagePath": "pages/discover/index/index",
         "iconPath": "/images/btn_discover.png",
         "selectedIconPath": "/images/btn_discover_HL.png"
       },
       {
         "text": "艺术品",
-        "pagePath": "pages/artifact/index",
+        "pagePath": "pages/artifact/index/index",
         "iconPath": "/images/btn_artwork.png",
         "selectedIconPath": "/images/btn_artwork_HL.png"
       },
       {
         "text": "艺术家",
-        "pagePath": "pages/demo/demo",
+        "pagePath": "pages/artist/index/index",
         "iconPath": "/images/btn_artist.png",
         "selectedIconPath": "/images/btn_artist_HL.png"
       },
       {
         "text": "我的",
-        "pagePath": "pages/demo/demo",
+        "pagePath": "pages/__demo/demo",
         "iconPath": "/images/btn_discover.png",
         "selectedIconPath": "/images/btn_discover_HL.png"
       }
