@@ -6,6 +6,7 @@ let col2H = 0;
 Page({
 
   data: {
+    uuid: app.util.uuid,
     showArtifact: false,
     artistInfo:{
       intro:'这是一首简单的小情歌唱出我们心中的不舍我想我很适合做一个歌唱者\n这是一首简单的小情歌唱出我们心中的不舍我想我很适合做一个歌唱者这是一首简单的小情歌唱出我\n们心中的不舍我想我很适合做一个歌唱者',
@@ -23,6 +24,7 @@ Page({
     col2: []
   },
   onLoad: function () {
+    console.log(this.data.artictId)
 
     //加载瀑布流
     wx.getSystemInfo({

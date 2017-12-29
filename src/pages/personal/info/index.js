@@ -19,16 +19,10 @@ Page({
   onLoad () {
 
   },
-  toFollow: function (e) {
-    var userId = this.data.userInfo.id || 1231232132313
+  toBindingTel: function () {
     wx.navigateTo({
-      url: "/pages/personal/follow/index?userId=" + userId
+      url: "/pages/personal/binding_tel/index"
     })
-  },
-  toInfo: function () {
-    var userId = this.data.userInfo.id || 1231232132313
-    wx.navigateTo({
-      url: "/pages/personal/info/index?userId=" + userId
-    })
+
   }
 })

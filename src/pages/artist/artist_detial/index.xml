@@ -4,7 +4,7 @@
             <image class="avatar"  mode="aspectFill" src="{{artistInfo.avatar}}"></image>
             <view class="mc-text-font-too-big mc-text-white name">{{artistInfo.name}}</view>
             <view class="mc-text-white mc-text-font-small mc-overflow-hidden tag">
-                <view class="tag-cell" wx:for="{{artistInfo.tag}}">{{item}}</view>
+                <view class="tag-cell" wx:for="{{artistInfo.tag}}" wx:key="uuid()">{{item}}</view>
             </view>
             <view class="mc-text-white intro">
                 <text>
