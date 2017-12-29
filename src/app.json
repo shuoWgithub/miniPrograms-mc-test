@@ -3,16 +3,11 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
-<<<<<<< HEAD
+    "pages/personal/follow/index",
     "pages/artist/artist_detial/index",
     "pages/artist/index/index",
     "pages/artifact/index/index",
     "pages/discover/index/index",
-=======
-    "pages/personal/follow/index",
-    "pages/artifact/index",
-    "pages/discover/index",
->>>>>>> 405c828d3e339900f8072518d23ea0143b782e22
     "pages/index/index",
     "pages/__demo/demo"
     // Dont remove this comment
