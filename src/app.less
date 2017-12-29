@@ -18,3 +18,36 @@ page {
   justify-content: center;
   box-sizing: border-box;
 }
+.mc-line-top, .mc-line-bottom {
+  position: relative;
+}
+.mc-line-top:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0;
+  box-sizing: border-box;
+  border-top: 1px solid #f1f1f1;
+  color: #f1f1f1;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.mc-line-bottom:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f1f1f1;
+  color: #f1f1f1;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
