@@ -3,6 +3,7 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
+    "pages/artist/artist_detial/index",
     "pages/artist/index/index",
     "pages/artifact/index/index",
     "pages/discover/index/index",

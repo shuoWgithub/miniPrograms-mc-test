@@ -1,0 +1,47 @@
+<view class="mc-position-relative">
+    <view class="mc-position-fixed artist-info {{showArtifact ? 'ar-animation-up-show' : ''}}" >
+        <view class="mc-position-absolute" bindtap="showArtifactTap">
+            <image class="avatar"  mode="aspectFill" src="{{artistInfo.avatar}}"></image>
+            <view class="mc-text-font-too-big mc-text-white name">{{artistInfo.name}}</view>
+            <view class="mc-text-white mc-text-font-small mc-overflow-hidden tag">
+                <view class="tag-cell" wx:for="{{artistInfo.tag}}">{{item}}</view>
+            </view>
+            <view class="mc-text-white intro">
+                <text>
+                    {{ artistInfo.intro }}
+                </text>
+            </view>
+            <button class="mc-background-white mc-text-font-regular">{{'关注'}}</button>
+            <image class="upglide" src="/images/icon_artist_details_upglide.png"></image>
+        </view>
+    </view>
+    <view class="artict-nav">
+        <view>
+            <image class="avatar" mode="aspectFill" src="{{artistInfo.avatar}}"></image>
+            <view>
+                <view class="artist-name">{{artistInfo.name}}</view>
+                <view class="artist-artifact">
+                    <text>{{artistInfo.focus}}</text>
+                    <text>人关注</text>
+                </view>
+            </view>
+        </view>
+        <button class="mc-background-black mc-text-white" bindtap="" disabled="{{false}}">关注</button>
+    </view>
+    <view class="artifact-list">
+        <view class="style-series-waterfall">
+            <view class="img_item" wx:for="{{[col1, col2]}}" wx:key="index">
+                <view wx:for="{{item}}" wx:key="id">
+                    <image src="{{item.pic}}" style="width:100%; height:{{item.height}}px;"></image>
+                    <view class="artifact_name"><text>持曼陀林琴的少</text></view>
+                    <view class="artifact_teacher">画布精选</view>
+                    <view class="artifact_info">画布精选 </view>
+                </view>
+            </view>
+            <view class="loading-view">{{pageToEnd ? '到底了' : '加载中...'}}</view>
+        </view>
+        <view style="display:none">
+            <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.pic}}" bindload="onImageLoad"></image>
+        </view>
+    </view>
+</view>

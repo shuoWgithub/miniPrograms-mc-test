@@ -52,6 +52,16 @@ Page({
    */
   onLoad () {
 
+  },
+  onReachBottom: function () {
+    this.loadImages()
+  },
 
+  loadImages: function () {
+    var artictList = this.data.artictList.concat(this.data.artictList)
+
+    this.setData({
+      artictList: artictList
+    });
   }
 })
