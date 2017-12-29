@@ -1,0 +1,30 @@
+<view class="">
+    <view>
+        <image mode="aspectFill" src="{{userInfo.avatar}}"></image>
+        <view>
+            <view>{{userInfo.name}}</view>
+            <view>{{userInfo.tel}}</view>
+        </view>
+        <image src="/images/icon_artist_details_upglide.png"></image>
+    </view>
+    <view>
+        <view>
+            <text>我的订单</text>
+            <image></image>
+        </view>
+        <view>
+            <text>我的订单</text>
+            <image></image>
+        </view>
+        <view>
+            <text>我的订单</text>
+            <image></image>
+        </view>
+    </view>
+    <view>
+        <view>
+            <text>关注我们</text>
+            <image></image>
+        </view>
+    </view>
+</view>

@@ -17,34 +17,37 @@
 .artifact-classify{
   overflow: hidden;
   margin: 0 15px 20px;
-  >view{
-    position: relative;
-    width: calc(~"50% - 4px");
-    float: left;
-    margin: 0 8px 8px 0;
 
-    .artifact-classify-item-image{
-      height: 107px; width: 100%; display: block;
-    }
-    .artifact-classify-name{
-      position: absolute;
-      z-index: 9;
-      color: #ffffff;
-      font-size: 14px;
-      top:0;
-      left: 0;
-      right: 0;
-      bottom: 5px;
-      background-color: rgba(0, 0, 0, 0.1);
-      text-align: center; line-height: 107px;
-    }
-  }
-  >view:nth-child(even){
-    float: right;margin-right: 0;
-  }
   .artifact-classify-longe:last-child{
     width: 100%; margin: 0;
   }
+}
+
+.artifact-classify > view{
+  position: relative;
+  width: calc(~"50% - 4px");
+  float: left;
+  margin: 0 8px 8px 0;
+
+  .artifact-classify-item-image{
+    height: 107px; width: 100%; display: block;
+  }
+  .artifact-classify-name{
+    position: absolute;
+    z-index: 9;
+    color: #ffffff;
+    font-size: 14px;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center; line-height: 107px;
+  }
+}
+
+.artifact-classify > view:nth-child(even){
+  float: right;margin-right: 0;
 }
 
 .scroll-view_H{

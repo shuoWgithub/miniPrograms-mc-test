@@ -4,6 +4,7 @@
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
     "pages/personal/updatePhoto/index",
+    "pages/personal/index/index",
     "pages/personal/follow/index",
     "pages/artist/artist_detial/index",
     "pages/artist/index/index",

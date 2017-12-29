@@ -15,7 +15,7 @@
       </view>
       <view class='lunbo'>
         <view class='lunbo-wrapper'>
-          <image src='{{imgUrl}}' wx:for='{{5}}' wx:key='index'/>
+          <image src='{{imgUrl}}' mode="aspectFill" wx:for='{{5}}' wx:key='index'/>
         </view>
       </view>
       <view class='mc-line-top line'></view>
