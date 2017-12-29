@@ -28,14 +28,14 @@
 .page-section-title{
   padding:17px 15px 0;
   display: block;
-  > view{
-    padding-top: 12px;
-    overflow: hidden;
-  }
   .style-series-cell{
     width: 20.8%; height: 28px; float: left;margin: 0 1.33% 10px;
     text-align: center; line-height: 28px; font-size: 12px; border: 2px solid #000000; border-radius: 16px;
   }
+}
+.page-section-title > view{
+  padding-top: 12px;
+  overflow: hidden;
 }
 
 .scroll-view-item_H{
@@ -69,15 +69,13 @@
   width:  calc(~'50% - 7px');
   display: inline-block;
   vertical-align: top;
-  >view{
-    margin-bottom: 24px;
-  }
+}
+.img_item > view{
+  margin-bottom: 24px;
 }
 .img_item:last-child {
   margin-left: 14px;
 }
-
-
 
 .add-more-artifact{
   height: 44px;
@@ -96,10 +94,8 @@
     }
   }
 }
-.page-artict{
-  >view:nth-child(2){
-    padding-bottom: 20px;
-  }
+.page-artict > view:nth-child(2){
+  padding-bottom: 20px;
 }
 
 .artict-cell{
@@ -111,26 +107,26 @@
     .avatar{
       width: 60px; height: 60px; border-radius: 50%;margin-right: 10px;
     }
-    >view{
-      display: flex;justify-content: flex-start;align-items: center;
-    }
+
     .artist-name {
       font-size: 18px;  font-weight: bolder; padding-bottom: 3px;
     }
     .artist-artifact{
       font-size: 14px;
     }
-    >button{
-       width: 60px; height: 30px; margin: 0; text-align: center; line-height: 26px; font-size: 14px; border: 2px solid #000000;border-radius: 0;
-    }
-    >button::after{
-      border-radius: 0;
-    }
   }
-  .artist-artifact{
-    >image{
-      width: 31%; height: 116px; margin: 20px 1.16% 0;
-    }
+  .artist-info > button{
+    width: 60px; height: 30px; margin: 0; text-align: center; line-height: 26px; font-size: 14px; border: 2px solid #000000;border-radius: 0;
+  }
+
+  .artist-info > button::after{
+    border-radius: 0;
+  }
+  .artist-info > view{
+    display: flex;justify-content: flex-start;align-items: center;
+  }
+  .artist-artifact > image{
+    width: 31%; height: 116px; margin: 20px 1.16% 0;
   }
 }
 

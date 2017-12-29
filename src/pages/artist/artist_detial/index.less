@@ -1,30 +1,37 @@
-.artist-info{
-  top: 0;left: 0;right: 0;bottom: 0;  background-color: rgba(0,0,0,.5); z-index: 999;
- >view{
-   bottom: 0;left: 25px; right: 25px;
-   .avatar{
-     width: 68px; height: 68px; border: 1px solid #ffffff; border-radius: 50%;
-   }
-   .name{
-     margin-bottom: 12px;
-   }
-   .tag-cell{
-     height: 24px; line-height: 24px; padding: 0 17px; margin-right: 10px; border: 2px solid #ffffff; border-radius: 24px; float: left;
-   }
-   .intro{
-     margin-bottom: 12px;
-   }
-   >button{
-     width: 60px; height: 30px;  text-align: center; line-height: 30px; border-radius: 2px; margin: 0;
-   }
-   >button::after{
-     border-radius: 2px;
-   }
-   .upglide{
-     display: block; width: 24px;height: 24px;margin: 40px auto;
-   }
- }
+.artist-info {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 999;
 }
+.artist-info > view{
+  bottom: 0;left: 25px; right: 25px;
+  .avatar{
+    width: 68px; height: 68px; border: 1px solid #ffffff; border-radius: 50%;
+  }
+  .name{
+    margin-bottom: 12px;
+  }
+  .tag-cell{
+    height: 24px; line-height: 24px; padding: 0 17px; margin-right: 10px; border: 2px solid #ffffff; border-radius: 24px; float: left;
+  }
+  .intro{
+    margin-bottom: 12px;
+  }
+  .upglide{
+    display: block; width: 24px;height: 24px;margin: 40px auto;
+  }
+  .focus-btn{
+    width: 60px; height: 30px;  text-align: center; line-height: 30px; border-radius: 2px; margin: 0;
+  }
+  .focus-btn::after{
+    border-radius: 2px;
+  }
+}
+
+
 /* nav */
 .artict-nav{
   margin: 0 15px 15px; padding: 20px 0; display: flex;justify-content: space-between; align-items: center;
@@ -33,21 +40,22 @@
   .avatar{
     width: 44px; height: 44px; border-radius: 50%;margin-right: 10px;
   }
-  >view{
-    display: flex;justify-content: flex-start;align-items: center;
-  }
   .artist-name {
     font-size: 16px;  font-weight: bolder; padding-bottom: 3px;
   }
   .artist-artifact{
     font-size: 12px;
   }
-  >button{
+  .focus-btn{
     width: 60px; height: 30px; margin: 0; text-align: center; line-height: 30px; font-size: 14px; border-radius: 0;
   }
-  >button::after{
+  .focus-btn::after{
     border-radius: 0;
   }
+}
+
+.artict-nav > view{
+  display: flex;justify-content: flex-start;align-items: center;
 }
 
 /* 瀑布流 */
@@ -59,10 +67,13 @@
   width:  calc(~'50% - 7px');
   display: inline-block;
   vertical-align: top;
-  >view{
-    margin-bottom: 24px;
-  }
+
 }
+
+.img_item > view{
+  margin-bottom: 24px;
+}
+
 .img_item:nth-child(2) {
   margin-left: 14px;
 }

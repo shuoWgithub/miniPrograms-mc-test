@@ -11,7 +11,7 @@
                     {{ artistInfo.intro }}
                 </text>
             </view>
-            <button class="mc-background-white mc-text-font-regular">{{'关注'}}</button>
+            <button class="focus-btn mc-background-white mc-text-font-regular">{{'关注'}}</button>
             <image class="upglide" src="/images/icon_artist_details_upglide.png"></image>
         </view>
     </view>
@@ -26,7 +26,7 @@
                 </view>
             </view>
         </view>
-        <button class="mc-background-black mc-text-white" bindtap="" disabled="{{false}}">关注</button>
+        <button class="focus-btn mc-background-black mc-text-white" bindtap="" disabled="{{false}}">关注</button>
     </view>
     <view class="artifact-list">
         <view class="style-series-waterfall">
