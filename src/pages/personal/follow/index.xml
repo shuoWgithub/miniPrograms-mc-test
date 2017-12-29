@@ -1,0 +1,24 @@
+<view class="wrapper">
+  <view class='top mc-line-top'>
+    <view class='text'>
+      <text class='number'>7</text>
+      <text class='focus'> 个关注</text>
+    </view>
+  </view>
+  <view class='detail mc-line-top'>
+    <view class='detail-one' wx:for='{{3}}' wx:key='index'>
+      <view class='user-info'>
+        <image src='{{imgUrl}}' class='portrait' />
+        <text class='name'>dreamed cool</text>
+        <text class='number'>213 人正在关注</text>
+        <view class='status'><text>已关注</text></view>
+      </view>
+      <view class='lunbo'>
+        <view class='lunbo-wrapper'>
+          <image src='{{imgUrl}}' wx:for='{{5}}' wx:key='index'/>
+        </view>
+      </view>
+      <view class='mc-line-top line'></view>
+    </view>
+  </view>
+</view>
