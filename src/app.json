@@ -3,8 +3,9 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
+    "pages/personal/updatePhoto/index",
     "pages/personal/follow/index",
-    "pages/artifact/index",
+    "pages/artifact/index/index",
     "pages/discover/index",
     "pages/index/index",
     "pages/__demo/demo"
