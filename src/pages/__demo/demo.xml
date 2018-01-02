@@ -1,4 +1,4 @@
-<import src="../../components/mc-tab-bar/index"/>
+<import src="../../components/tab_bar/index"/>
 
 <template is="tabbar" data="{{tabbar}}"/>
 

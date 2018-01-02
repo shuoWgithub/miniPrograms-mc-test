@@ -30,5 +30,10 @@ Page({
     wx.navigateTo({
       url: "/pages/personal/info/index?userId=" + userId
     })
+  },
+  toCollection: function () {
+    wx.navigateTo({
+      url: "/pages/personal/collection/index"
+    })
   }
 })

@@ -1,11 +1,10 @@
 <view class="page-body">
-    <scroll-view class="art-categories-scroll-view" scroll-x="true">
-        <view class="art-categories-cell  {{selectId == item.id ? 'categories-selected' : ''}}" wx:for="{{artCategories}}"  wx:key="uuid()">
-            <text>{{item.title}}</text>
-        </view>
-    </scroll-view>
+    <view class="mc-text-gary collection-num">
+        <text>12</text>
+        <text class="mc-text-font-tiny">个收藏</text>
+    </view>
     <scroll-view class="art-styleSeries-scroll-view" scroll-x="true">
-        <view class="art-styleSeries-cell" wx:for="{{artCategories[0].styleSeries}}"  wx:key="uuid()">
+        <view class="art-styleSeries-cell" wx:for="{{styleSeries}}"  wx:key="uuid()">
             <text>{{item}}</text>
         </view>
     </scroll-view>

@@ -72,4 +72,5 @@ Page({
       artictList: artictList
     });
   }
+
 })

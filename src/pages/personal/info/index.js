@@ -19,10 +19,17 @@ Page({
   onLoad () {
 
   },
+
+  updateUserName: function (e) {
+      wx.showLoading({
+        title: e.detail.value,
+        icon: 'loading'
+      })
+  },
+
   toBindingTel: function () {
     wx.navigateTo({
       url: "/pages/personal/binding_tel/index"
     })
-
   }
 })

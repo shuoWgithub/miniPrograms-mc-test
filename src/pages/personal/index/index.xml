@@ -12,7 +12,7 @@
             <text>我的订单</text>
             <image src="/images/icon_more.png"></image>
         </view>
-        <view class="module-cell">
+        <view class="module-cell" bindtap="toCollection">
             <text>我的收藏</text>
             <image src="/images/icon_more.png"></image>
         </view>

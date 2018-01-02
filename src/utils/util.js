@@ -39,4 +39,21 @@ function uuid() {
   return uuid;
 }
 
-module.exports = { formatDate, uuid }
+var verification = {
+  checkCellphone: function(phoneNum){
+    var reg = /^1[0-9]{10}$/;
+    return reg.test(phoneNum)
+  },
+  isEmail: function(str){
+    var reg =  /^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/;
+    return reg.test(phoneNum)
+  }
+}
+
+var aleat = {
+  success: '/images/toast_success.png',
+  warning: '/images/toast_warning.png',
+  danger: '/images/toast_dange.png'
+}
+
+module.exports = { formatDate, uuid, verification, aleat }

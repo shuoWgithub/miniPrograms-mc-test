@@ -1,0 +1,9 @@
+<import src="../../../components/select_citys/index"/>
+
+<template is="selectcitys"/>
+
+<view>
+
+</view>
+
+

@@ -1,0 +1,27 @@
+<template name="selectcitys">
+    <!--index.wxml-->
+    <view class="container">
+        <view class="input">
+            <input placeholder="选择" value="{{initCityData.province}}-{{initCityData.city}}-{{initCityData.county}}" focus="{{focus}}" bindfocus="initCityData.open" />
+        </view>
+    </view>
+
+    <view wx:if="{{initCityData.condition}}" class="citypicker">
+        <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{initCityData.value}}" bindchange="initCityData.bindChange" class="citybody">
+            <view class="cityheader">
+                <view bindtap="initCityData.open" class="city-cancel">取消</view>
+                <view bindtap="initCityData.open" class="city-true">确定</view>
+            </view>
+            <picker-view-column>
+                <view wx:for="{{initCityData.provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{initCityData.citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{initCityData.countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+</template>
+

@@ -1,0 +1,42 @@
+<view class="artifact-content">
+  <view class="mc-position-relative artifact-photo">
+    <image src="{{selectArtifact.url}}"  style="height:{{selectArtifact.height}}px;" bindload="onImageLoad" bindtap="previewImage"></image>
+    <button class="mc-position-absolute mc-clean-input" >
+      <image src="{{artifact.isCollection ? '/images/icon_collect_click.png' : '/images/icon_collect_default.png'}}" ></image>
+    </button>
+  </view>
+
+  <view class="artifact-photo-list">
+    <scroll-view class="scroll-view-H" scroll-x="true">
+      <view wx:for="{{artifact.list}}" wx:key="{{uuid()}}" class="scroll-view-item-H" data-url="{{item}}"  bindtap="selectArtifactPhoto">
+        <image class="scroll-view-item-image" mode="aspectFill" src="{{item}}"></image>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="mc-overflow-hidden artifact-info">
+    <view>
+      <view class="mc-text-font-little-big mc-text-bolder artifact-name">{{artifact.topic}}</view>
+      <view class="mc-text-font-regular artist-name">{{artifact.name}}</view>
+      <view class="mc-text-font-small">{{artifact.info}}</view>
+    </view>
+    <view>
+      <view>
+        <text class="mc-text-font-small" >租赁: </text>
+        <text class="mc-text-font-middle">{{artifact.price}}</text>
+      </view>
+      <view>
+        <text class="mc-text-font-small">售卖: </text>
+        <text class="mc-text-font-middle">{{artifact.price}}</text>
+      </view>
+    </view>
+    <view class="mc-text-gary">
+      <view class="mc-text-font-middle">作品介绍:</view>
+      <view  class="mc-text-font-regular">{{artifact.intro}}</view>
+    </view>
+  </view>
+
+  <view class="artifact-made">
+    <button class="mc-text-font-middle">立即定制</button>
+  </view>
+</view>

@@ -3,8 +3,11 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
-    "pages/personal/binding_tel/index",
+    "pages/location/index/index",
     "pages/personal/index/index",
+    "pages/personal/collection/index",
+    "pages/artifact/detial/index",
+    "pages/personal/binding_tel/index",
     "pages/personal/info/index",
     "pages/personal/updatePhoto/index",
     "pages/personal/follow/index",

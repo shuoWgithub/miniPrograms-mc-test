@@ -1,29 +1,25 @@
-// 获取全局应用程序实例对象
 const app = getApp()
 let col1H = 0;
 let col2H = 0;
 
+// 创建页面实例对象
 Page({
+  /**
+   * 页面的初始数据
+   */
   data: {
     uuid: app.util.uuid,
-    showArtifact: false,
-    artistInfo:{
-      intro:'这是一首简单的小情歌唱出我们心中的不舍我想我很适合做一个歌唱者\n这是一首简单的小情歌唱出我们心中的不舍我想我很适合做一个歌唱者这是一首简单的小情歌唱出我\n们心中的不舍我想我很适合做一个歌唱者',
-      tag: ['参数', '温泉', '额阿达'],
-      name: '手冢治虫',
-      focus: 123,
-      avatar: 'http://image.artful.com.cn/artful/other/2017-12-08/6dbd9088de7404a0.jpg'
-    },
-
+    styleSeries:['现实分割', '差异风格', '工作风格', '现实分割', '差异风格', '工作风格'],
     scrollH: 0,
     imgWidth: 0,
     loadingCount: 0,
     images: [],
     col1: [],
     col2: []
+
   },
+
   onLoad: function () {
-    console.log(this.data.artictId)
 
     //加载瀑布流
     wx.getSystemInfo({
@@ -44,12 +40,8 @@ Page({
     })
   },
 
-  showArtifactTap: function () {
-    this.setData({showArtifact: true});
-  },
-
   onReachBottom: function () {
-    this.loadImages()
+   this.loadImages()
   },
 
   //瀑布流
@@ -130,5 +122,12 @@ Page({
       loadingCount: images.length,
       images: images
     });
+  },
+
+  toDetial: function (e) {
+    var artifactId = e.currentTarget.dataset.artifactId || 1231232132313
+    wx.navigateTo({
+      url: "/pages/artifact/detial/index?artifactId=" + artifactId
+    })
   }
 })
