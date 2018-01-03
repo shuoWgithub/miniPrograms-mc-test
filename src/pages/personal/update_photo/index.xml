@@ -1,0 +1,15 @@
+<view class='wrapper'>
+  <view class='top'>
+    <view>
+      <text bindtap='loadImg'>更换头像</text>
+    </view>
+  </view>
+  <view class='photo'>
+    <image src='{{imgUrl}}' style='width: {{width}}px;height: {{height}}px'/>
+  </view>
+  <canvas canvas-id='cutImg' class='canvas' bindtouchmove='canvasMove'
+  style='top: 140px;left: 87px;'></canvas>
+  <view class='bottom'>
+    <view bindtap='cut'>确认修改</view>
+  </view>
+</view>
