@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 var tcity = require("../../utils/citys.js");
+var that;
 
 var initCityData = {
   provinces: [],
@@ -15,10 +16,12 @@ var initCityData = {
 }
 
 function bindChange(e) {
-  //console.log(e);
+  if (e == undefined){
+    throw "请传入element对象"
+  }
   var val = e.detail.value
-  var t = initCityData.values;
-  var cityData = initCityData.cityData;
+  var t = that.data.initCityData.values;
+  var cityData = that.data.cityData;
 
   if(val[0] != t[0]){
     console.log('province no ');
@@ -32,14 +35,14 @@ function bindChange(e) {
       countys.push(cityData[val[0]].sub[0].sub[i].name)
     }
 
-    this.setData({
-      province: initCityData.provinces[val[0]],
-      city: cityData[val[0]].sub[0].name,
-      citys:citys,
-      county: cityData[val[0]].sub[0].sub[0].name,
-      countys:countys,
-      values: val,
-      value:[val[0],0,0]
+    that.setData({
+      'initCityData.province': that.data.initCityData.provinces[val[0]],
+      'initCityData.city': cityData[val[0]].sub[0].name,
+      'initCityData.citys':citys,
+      'initCityData.county': cityData[val[0]].sub[0].sub[0].name,
+      'initCityData.countys':countys,
+      'initCityData.values': val,
+      'initCityData.value':[val[0],0,0]
     })
 
     return;
@@ -52,39 +55,41 @@ function bindChange(e) {
       countys.push(cityData[val[0]].sub[val[1]].sub[i].name)
     }
 
-    this.setData({
-      city: initCityData.citys[val[1]],
-      county: cityData[val[0]].sub[val[1]].sub[0].name,
-      countys:countys,
-      values: val,
-      value:[val[0],val[1],0]
+    that.setData({
+      'initCityData.city': that.data.initCityData.citys[val[1]],
+      'initCityData.county': cityData[val[0]].sub[val[1]].sub[0].name,
+      'initCityData.countys':countys,
+      'initCityData.values': val,
+      'initCityData.value':[val[0],val[1],0]
     })
     return;
   }
   if(val[2] != t[2]){
     console.log('county no');
-    this.setData({
-      county: initCityData.countys[val[2]],
-      values: val
+    that.setData({
+      'initCityData.county': that.data.initCityData.countys[val[2]],
+      'initCityData.values': val
     })
     return;
   }
 }
 
 function open() {
-  this.setData({
-    condition:!initCityData.condition
+  that.setData({
+    'initCityData.condition': !that.data.initCityData.condition
   })
 }
 
-function onLoad() {
-  console.log("onLoad");
-  var that = this;
+function onLoad(wThis) {
+
+  if (wThis == undefined){
+    throw "请传入page this对象"
+  }
+
+  that = wThis;
 
   tcity.init(that);
-
   var cityData = that.data.cityData;
-
 
   const provinces = [];
   const citys = [];
@@ -103,19 +108,19 @@ function onLoad() {
   }
 
   that.setData({
-    'provinces': provinces,
-    'citys':citys,
-    'countys':countys,
-    'province':cityData[0].name,
-    'city':cityData[0].sub[0].name,
-    'county':cityData[0].sub[0].sub[0].name
+    'initCityData.provinces': provinces,
+    'initCityData.citys':citys,
+    'initCityData.countys':countys,
+    'initCityData.province':cityData[0].name,
+    'initCityData.city':cityData[0].sub[0].name,
+    'initCityData.county':cityData[0].sub[0].sub[0].name
   })
-  console.log('初始化完成');
+  console.log('初始化城市选择完成');
 }
 
 
 module.exports = {
-  cityData,
+  initCityData,
   bindChange,
   open,
   onLoad

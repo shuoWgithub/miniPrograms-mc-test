@@ -1,9 +1,78 @@
 <import src="../../../components/select_citys/index"/>
 
-<template is="selectcitys"/>
+<view class="select-user" >
+    <view class="{{isBusiness ? 'select-type' : '' }}" data-type="true" bindtap="selectType">企业</view>
+    <view class="{{isBusiness ? '' : 'select-type' }}" data-type="false" bindtap="selectType">个人</view>
+</view>
 
-<view>
+<view class="cell contact-way">
+    <text class="mc-text-font-middle mc-text-bolder">联系方式</text>
+    <text class="mc-text-blue mc-text-font-small mc-float-right"  bindtap="openLocationMask">从最近的地址中选择</text>
+    <view class="contact-input">
+        <view class="business-name" wx:if="{{isBusiness}}">
+            <input hidden="{{inputHide}}" class="box-shadow-gary" bindinput="userVerificationCodeInput" placeholder-style="z-index: 2;" placeholder="* 请输入公司名称" />
+        </view>
+        <view class="user-name">
+            <input hidden="{{inputHide}}" class="box-shadow-gary" bindinput="userVerificationCodeInput " placeholder="* 联系人名称" />
+        </view>
+        <view class="tel-num">
+            <input hidden="{{inputHide}}" class="box-shadow-gary" bindinput="userVerificationCodeInput" placeholder="* 联系电话" />
+        </view>
+
+    </view>
+</view>
+
+<view class="cell location">
+    <text class="mc-text-font-middle mc-text-bolder">地址</text>
+    <view class="box-shadow-gary three-level">
+        <template is="selectcitys" data="{{initCityData}}"/>
+    </view>
+    <view class="textarea-view">
+        <textarea class="box-shadow-gary" hidden="{{inputHide}}" bindinput="userVerificationCodeInput" placeholder="* 区，街道编号/名称，楼宇名称" />
+    </view>
 
 </view>
 
+<view class="cell remark">
+    <text class="mc-text-font-middle mc-text-bolder">备注</text>
+    <view class="textarea-view">
+        <textarea class="box-shadow-gary" hidden="{{inputHide}}" bindinput="userVerificationCodeInput" placeholder="选填" />
+    </view>
+</view>
+
+<view class="cell service">
+    <text class="mc-text-font-middle mc-text-bolder">请选择租赁时长</text>
+    <view class="service-content">
+        <view class="mc-overflow-hidden">
+            <button class="mc-text-font-middle mc-background-white {{selectDateId == item.time ? 'select-button' : ''}}"  wx:for="{{packageList}}"  wx:key="{{uuid()}}" data-time="{{item.time}}" bindtap="selectTime">{{item.time + '天'}}</button>
+        </view>
+
+        <view class="additional" wx:for="{{ additionalList }}"  wx:key="{{item}}" data-additional="{{item}}" bindtap="selectAdditional">
+            <image src="{{ item.selected ? '/images/icon_check box_selected.png' : '/images/icon_check box_default.png'}}"></image>
+            <text class="mc-text-font-small">{{item.content}}</text>
+        </view>
+    </view>
+</view>
+
+<view class="cell submit">
+    <button class="mc-background-black mc-text-white">确定提交</button>
+</view>
+
+<view class="select-location-mask" wx:if="{{locationMaskOpne}}" >
+    <view class="mc-background-white">
+        <view class="select-location-nav mc-text-font-middle mc-text-bolder mc-overflow-hidden">
+            <text class="mc-float-left">从最近的地址中选择</text>
+            <text class="mc-float-right mc-text-font-too-big-more" bindtap="openLocationMask">×</text>
+        </view>
+        <view class="select-location-new">
+            <image src="/images/location-new.png"></image>
+        </view>
+        <view class="select-location-List mc-text-gary" wx:for="{{locationList}}" wx:key="uuid()">
+           <view>{{item.corporation}}</view>
+           <view>{{item.name}}</view>
+           <view>{{item.tel}}</view>
+           <view>{{item.address}}</view>
+        </view>
+    </view>
+</view>
 
