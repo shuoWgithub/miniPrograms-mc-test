@@ -1,0 +1,24 @@
+<view>
+    <view class="user-avatar">
+        <text class="mc-float-left mc-text-font-regular">头像</text>
+        <view class="mc-float-right mc-overflow-hidden">
+            <image class="mc-float-left " src="{{userInfo.avatar}}"></image>
+            <image class="mc-float-left " src="/images/icon_more.png"></image>
+        </view>
+    </view>
+    <view class="module-cell mc-text-font-middle">
+        <text class="mc-float-left ">昵称</text>
+        <image class="mc-float-right" src="/images/icon_more.png"></image>
+        <input class="mc-float-right user-name" placeholder="昵称" type="text" value="{{userInfo.name}}" bindblur="updateUserName"/>
+
+    </view>
+    <view class="module-cell mc-text-font-middle" bindtap="toBindingTel">
+        <text class="mc-float-left ">手机号</text>
+        <view class="mc-float-right">
+            <text class="mc-text-gary">{{userInfo.tel}}</text>
+            <image src="/images/icon_more.png"></image>
+        </view>
+    </view>
+</view>
+
+

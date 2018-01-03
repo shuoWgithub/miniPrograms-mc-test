@@ -19,21 +19,17 @@ Page({
   onLoad () {
 
   },
-  toFollow: function (e) {
-    var userId = this.data.userInfo.id || 1231232132313
-    wx.navigateTo({
-      url: "/pages/personal/follow/index?userId=" + userId
-    })
+
+  updateUserName: function (e) {
+      wx.showLoading({
+        title: e.detail.value,
+        icon: 'loading'
+      })
   },
-  toInfo: function () {
-    var userId = this.data.userInfo.id || 1231232132313
+
+  toBindingTel: function () {
     wx.navigateTo({
-      url: "/pages/personal/info/index?userId=" + userId
-    })
-  },
-  toCollection: function () {
-    wx.navigateTo({
-      url: "/pages/personal/collection/index"
+      url: "/pages/personal/binding_tel/index"
     })
   }
 })

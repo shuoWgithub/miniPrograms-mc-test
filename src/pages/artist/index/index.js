@@ -57,6 +57,14 @@ Page({
     this.loadImages()
   },
 
+  toArtistDetial: function (e) {
+    var artictId = e.currentTarget.dataset.id || 1231232132313
+    wx.navigateTo({
+      url: "/pages/artist/artist_detial/index?artictId=" + artictId
+    })
+
+  },
+
   loadImages: function () {
     var artictList = this.data.artictList.concat(this.data.artictList)
 
@@ -64,4 +72,5 @@ Page({
       artictList: artictList
     });
   }
+
 })

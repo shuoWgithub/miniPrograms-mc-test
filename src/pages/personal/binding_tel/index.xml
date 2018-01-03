@@ -1,0 +1,16 @@
+<view class="binding-tel">
+    <view class="tel-input ">
+        <input class="box-shadow" placeholder="手机号" type="number" bindinput="userTelNumInput"  auto-focus/>
+    </view>
+    <text class="mc-text-red mc-text-font-tiny {{userTelNumCorrect ? 'ar-opacity-none' : 'ar-opacity'}}">手机号输入有误</text>
+    <view class="verification-input">
+        <input class="mc-float-left box-shadow"  maxlength="6"  bindinput="userVerificationCodeInput" placeholder="6位验证码" />
+        <button class="box-shadow mc-background-black mc-float-right mc-text-white mc-text-font-regular" disabled="{{getVerificationCodeDisabled}}" bindtap="getVerificationCode">{{getVerificationText}}</button>
+    </view>
+    <text class="mc-text-red mc-text-font-tiny ar-opacity-none">验证码有误</text>
+    <view class="">
+        <button class="mc-background-black mc-text-white mc-text-font-regular box-shadow" disabled="{{bindTelNumDisabled}}" bindtap="bindTelNum">立即修改</button>
+    </view>
+</view>
+
+

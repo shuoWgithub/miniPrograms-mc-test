@@ -5,7 +5,7 @@
         </view>
     </scroll-view>
     <view>
-        <view wx:for="{{artictList}}"  wx:key="uuid()">
+        <view wx:for="{{artictList}}" bindtap="toArtistDetial" data-id="{{item.id}}" wx:key="uuid()">
             <view class="artist-info">
                 <view>
                     <image class="avatar" mode="aspectFill" src="{{item.avatar}}"></image>

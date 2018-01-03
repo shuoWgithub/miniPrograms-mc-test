@@ -4,13 +4,19 @@
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
     "pages/personal/update_photo/index",
+    "pages/location/index/index",
     "pages/personal/index/index",
+    "pages/personal/collection/index",
+    "pages/artifact/detial/index",
+    "pages/personal/binding_tel/index",
+    "pages/personal/info/index",
+    "pages/personal/updatePhoto/index",
     "pages/personal/follow/index",
     "pages/artist/artist_detial/index",
     "pages/artist/index/index",
     "pages/artifact/index/index",
     "pages/discover/index/index",
-    "pages/index/index",
+    "pages/__index/index",
     "pages/__demo/demo"
     // Dont remove this comment
   ],
@@ -65,7 +71,7 @@
       },
       {
         "text": "我的",
-        "pagePath": "pages/__demo/demo",
+        "pagePath": "pages/personal/index/index",
         "iconPath": "/images/btn_discover.png",
         "selectedIconPath": "/images/btn_discover_HL.png"
       }
