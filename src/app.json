@@ -3,7 +3,7 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
-    "pages/personal/updatePhoto/index",
+    "pages/personal/update_photo/index",
     "pages/personal/index/index",
     "pages/personal/follow/index",
     "pages/artist/artist_detial/index",
