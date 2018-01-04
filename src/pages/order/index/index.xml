@@ -30,9 +30,9 @@
                 </view>
             </view>
         </view>
-        <view class="order-other">
-            <button class="mc-background-black mc-text-white" bindtap="openInstallMask">{{'查看安装'}}</button>
-            <button class="mc-background-black mc-text-white" bindtap="tologistics">{{'查看物流'}}</button>
+        <view class="order-other ">
+            <button class="mc-background-black mc-text-white mc-text-font-middle " bindtap="openInstallMask">{{'查看安装'}}</button>
+            <button class="mc-background-black mc-text-white mc-text-font-middle " bindtap="tologistics">{{'查看物流'}}</button>
         </view>
     </view>
 </view>
