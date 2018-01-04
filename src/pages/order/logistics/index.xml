@@ -1,0 +1,17 @@
+<view class="content">
+    <view class="mc-text-font-middle mc-text-bolder logistics-nav">物流信息跟踪</view>
+    <view class="mc-position-relative">
+        <view class="mc-position-relative logistics-cell" wx:for="{{list}}" wx:key="uuid()">
+            <view>2017-12-04 20:15:31</view>
+            <view>快递被在北京朝阳区东直门公司商都寄存点分布进行签售扫描，快件已被签收 签售</view>
+
+            <view class="mc-position-absolute round">
+                <view hidden="{{index + 1 == list.length}}" class="mc-background-black mc-position-absolute"></view>
+            </view>
+        </view>
+
+        <view class="mc-position-absolute mc-background-black mc-background-black line">
+            <view class="mc-background-black mc-position-absolute"></view>
+        </view>
+    </view>
+</view>

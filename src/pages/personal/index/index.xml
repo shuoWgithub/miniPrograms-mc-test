@@ -8,7 +8,7 @@
         <image src="/images/icon_more.png"></image>
     </view>
     <view>
-        <view class="module-cell">
+        <view class="module-cell" bindtap="toOrder">
             <text>我的订单</text>
             <image src="/images/icon_more.png"></image>
         </view>

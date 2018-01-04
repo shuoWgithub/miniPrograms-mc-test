@@ -37,6 +37,6 @@
   </view>
 
   <view class="artifact-made">
-    <button class="mc-text-font-middle">立即定制</button>
+    <button class="mc-text-font-middle" bindtap="toLocation">立即定制</button>
   </view>
 </view>

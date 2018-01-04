@@ -31,5 +31,12 @@ Page({
     wx.navigateTo({
       url: "/pages/personal/binding_tel/index"
     })
-  }
+  },
+
+  toBindingAvatar: function () {
+    wx.navigateTo({
+      url: "/pages/personal/update_photo/index"
+    })
+  },
+
 })

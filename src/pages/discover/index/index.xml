@@ -40,6 +40,6 @@
     <view class="private-order">
         <text>不知道哪个艺术平更适合\n你的空间?</text>
         <text>留下信息, 空间艺术顾问会提供专属方案</text>
-        <button bindtap="" >立即定制</button>
+        <button bindtap="toLocation" >立即定制</button>
     </view>
 </view>

@@ -35,5 +35,10 @@ Page({
     wx.navigateTo({
       url: "/pages/personal/collection/index"
     })
+  },
+  toOrder: function () {
+    wx.navigateTo({
+      url: "/pages/order/index/index"
+    })
   }
 })

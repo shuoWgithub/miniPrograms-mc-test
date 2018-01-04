@@ -22,7 +22,10 @@ Page({
   },
 
   onLoad: function () {
-
-
+  },
+  toLocation: function () {
+    wx.navigateTo({
+      url: "/pages/location/index/index"
+    })
   }
 })

@@ -55,5 +55,11 @@ Page({
     let imgHeight = oImgH * scale;      //自适应高度
 
     this.setData({'selectArtifact.height' : imgHeight})
+  },
+
+  toLocation: function () {
+    wx.navigateTo({
+      url: "/pages/location/index/index"
+    })
   }
 })

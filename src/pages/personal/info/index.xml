@@ -1,5 +1,5 @@
 <view>
-    <view class="user-avatar">
+    <view class="user-avatar" bindtap="toBindingAvatar">
         <text class="mc-float-left mc-text-font-regular">头像</text>
         <view class="mc-float-right mc-overflow-hidden">
             <image class="mc-float-left " src="{{userInfo.avatar}}"></image>

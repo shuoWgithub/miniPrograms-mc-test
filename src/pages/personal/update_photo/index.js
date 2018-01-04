@@ -7,11 +7,31 @@ Page({
     title: '',
     tabbar: {},
     imgUrl: 'http://image.artful.com.cn/appbanner/64958109_p0_master1200.jpg',
-    width: 450,
-    height: 475,
-    cutImg: ''
+    height: wx.getSystemInfoSync().windowWidth,
+    canvasWidth: 200,
+    cutImgPath: '',
+    ctx: null
   },
   onLoad: function () {
+  },
+  onImageLoad: function (e) {
+    let windowWidth = wx.getSystemInfoSync().windowWidth;
+
+    let oImgW = e.detail.width;         //图片原始宽度
+    let oImgH = e.detail.height;        //图片原始高度
+    let imgWidth = windowWidth  //图片设置的宽度
+    let scale = imgWidth / oImgW;        //比例计算
+    let imgHeight = oImgH * scale;      //自适应高度
+    var canvasWidth = imgWidth > imgHeight ? imgHeight : imgWidth
+    this.setData({height: imgHeight, canvasWidth: canvasWidth - 2})
+
+    let that = this
+    const ctx = wx.createCanvasContext('cutImg')
+    that.setData({ctx: ctx})
+    var x = (windowWidth -  that.data.canvasWidth)/2
+    var y = (that.data.height -  that.data.canvasWidth)/2
+    that.data.ctx.drawImage(that.data.imgUrl, -x, -y, windowWidth, that.data.height)
+    that.data.ctx.draw()
   },
   loadImg: function () { // 选择图片
     wx.chooseImage({
@@ -25,21 +45,19 @@ Page({
   },
   cut: function () { // 确认修改
     let that = this
-    console.log(this)
-    const ctx = wx.createCanvasContext('cutImg')
-    console.log(ctx)
-    ctx.drawImage(that.data.imgUrl, 0, 0, 200, 200)
-    ctx.draw()
     wx.canvasToTempFilePath({
-      x: 100,
-      y: 100,
-      width: 200,
-      height: 200,
+      x: 0,
+      y: 0,
+      width: that.data.canvasWidth,
+      height: that.data.canvasWidth,
       canvasId: 'cutImg',
       success: (res) => {
-        this.setData({cutImg: res.tempFilePath})
-        console.log(res)
+        that.setData({cutImgPath: res.tempFilePath})
+
       }
     })
+
+
+
   }
 })

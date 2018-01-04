@@ -1,0 +1,63 @@
+<view>
+    <view wx:for="{{order}}" wx:key="uuid()" class="order-cell">
+        <view class="order-cell-id content-margin">
+            <text>订单ID: {{item.id}}</text>
+        </view>
+        <view class="order-cell-info">
+            <view class="order-name">
+                <text class="mc-text-font-middle mc-text-bolder">{{item.name}}</text>
+                <text class="mc-text-font-tiny mc-text-gary">共享租</text>
+            </view>
+            <view class="mc-text-gary">
+                <view>{{item.user.name}}</view>
+                <view>{{item.user.tel}}</view>
+            </view>
+            <view class=" n">
+                <text>订单状态: </text>
+                <text class="mc-text-font-middle mc-text-bolder">{{item.type}}</text>
+            </view>
+        </view>
+        <view class="artifact-list">
+            <view class="mc-text-font-middle artifact-list-title">包含以下艺术品：</view>
+            <view>
+                <view class="mc-overflow-hidden content-margin artfaict-cell content-padding" wx:for="{{item.artifactList}}" wx:for-item="artifact"  wx:key="uuid()">
+                    <image class="mc-float-left" src="{{artifact.url}}" mode="aspectFill"></image>
+                    <view class="mc-float-left">
+                        <view>{{'正义的审判-落魄的女巫'}}</view>
+                        <view class="artifact-artist-name mc-text-gary">{{'圣地亚哥·马里奇'}}</view>
+                        <view class="mc-text-gary">{{'1999年 油画 | 100x100cm'}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="order-other">
+            <button class="mc-background-black mc-text-white" bindtap="openInstallMask">{{'查看安装'}}</button>
+            <button class="mc-background-black mc-text-white" bindtap="tologistics">{{'查看物流'}}</button>
+        </view>
+    </view>
+</view>
+
+<view class="install-mask" wx:if="{{installMaskOpne}}">
+<view class="mc-background-white">
+    <view class="install-mask-nav mc-text-font-middle mc-text-bolder mc-overflow-hidden">
+        <text class="mc-float-left">安装信息</text>
+        <text class="mc-float-right mc-text-font-too-big-more" bindtap="openInstallMask">×</text>
+    </view>
+    <view class="install-cell">
+        <view class="install-cell-title">安装信息</view>
+        <view>开始: 2017-12-18 13：00</view>
+        <view>结束: 2017-12-18 13：00</view>
+    </view>
+    <view class="install-cell">
+        <view class="install-cell-title">安装代理</view>
+        <view>北京市朝阳区第一拆迁大队</view>
+    </view>
+    <view class="install-cell">
+        <view class="install-cell-title">现场监理</view>
+        <view>我的画布COO：Erik</view>
+    </view>
+
+</view>
+</view>
+
+

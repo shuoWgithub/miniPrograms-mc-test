@@ -1,0 +1,78 @@
+.order-cell{
+
+  width: 84%; margin: 20px 4% 0;
+  padding: 15px 4%;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+
+  .content-margin{
+    margin-bottom: 12px;
+  }
+  .order-cell-info{
+    padding: 12px 0;
+    border-top: 1px solid #f1f1f1;
+  }
+  .order-cell-info > view:nth-child(2){
+    padding: 6px 0;
+  }
+  .order-cell-info > view:nth-child(3){
+    text-align: right;
+  }
+
+  .artifact-list{
+    border-top: 1px solid #f1f1f1;
+  }
+  .artifact-list-title{
+    padding: 12px 0;
+  }
+  .order-name > text:nth-child(2){
+    vertical-align: middle;
+    display: inline-block; margin: 0 15px; border-radius: 20px;
+    border: 1px solid #676767; padding: 1px 9px;
+  }
+  .artfaict-cell > image{
+    width: 92px; height: 92px;
+  }
+  .artfaict-cell > view{
+    margin: 6px 15px 0;
+  }
+  .artifact-artist-name{
+    padding: 5px 0 11px;
+  }
+  .order-other{
+    border-top: 1px solid #f1f1f1;
+    text-align: right; padding-top: 17px;
+  }
+  .order-other > button{
+    display: inline-block;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+    width: 106px; height: 36px; line-height: 36px; text-align: center; border-radius: 36px;
+  }
+}
+
+.install-mask{
+  position: fixed; background-color: rgba(0,0,0,.3);
+  top:0; left: 0; right: 0; bottom: 0;
+
+  display: -webkit-box; justify-content: center;  align-items: center;
+  display: -webkit-flex; -webkit-justify-content: center;  -webkit-align-items: center;
+  display: -ms-flexbox; -ms-justify-content: center;  -ms-align-items: center;
+  display: -moz-box; -moz-justify-content: center;  -moz-align-items: center;
+}
+
+.install-mask > view{
+  width: 77%; padding: 20px;
+  .install-mask-nav{
+    padding-bottom: 15px;
+  }
+  .install-mask-nav > text:nth-child(2){
+    padding: 10px 0 15px 15px; line-height: 0px;
+  }
+
+  .install-cell{
+    padding: 15px 5px;  border-top: 1px solid #f1f1f1;
+
+    .install-cell-title{
+      padding-bottom: 8px; font-size: 16px;
+    }
+  }
+}

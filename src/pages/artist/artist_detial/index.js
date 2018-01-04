@@ -130,5 +130,12 @@ Page({
       loadingCount: images.length,
       images: images
     });
+  },
+
+  toDetial: function (e) {
+    var artifactId = e.currentTarget.dataset.artifactId || 1231232132313
+    wx.navigateTo({
+      url: "/pages/artifact/detial/index?artifactId=" + artifactId
+    })
   }
 })
