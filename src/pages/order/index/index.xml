@@ -12,9 +12,22 @@
                 <view>{{item.user.name}}</view>
                 <view>{{item.user.tel}}</view>
             </view>
-            <view class=" n">
+            <view class="">
                 <text>订单状态: </text>
                 <text class="mc-text-font-middle mc-text-bolder">{{item.type}}</text>
+            </view>
+        </view>
+        <view class="order-list">
+            <view class="mc-text-font-middle artifact-list-title">订单记录：</view>
+            <view class="order-list-info mc-overflow-hidden" wx:for="{{[1,2]}}" wx:key="uuid()">
+                <view class="mc-float-left">
+                    <view>首次订单</view>
+                    <view class="mc-text-gary mc-text-font-small">2018.01.12-2019.12.12</view>
+                </view>
+                <view class="mc-float-right">
+                    <view class="mc-text-font-small">状态：已到期</view>
+                    <view>￥4396</view>
+                </view>
             </view>
         </view>
         <view class="artifact-list">
