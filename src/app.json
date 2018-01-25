@@ -3,8 +3,11 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
+<<<<<<< HEAD
     "pages/__test_upload/index",
     "pages/discover/index/index",
+=======
+>>>>>>> d77c1fc0e9b3e077065090709ce6f014ecc9b641
     "pages/order/index/index",
     "pages/personal/index/index",
     "pages/order/logistics/index",
