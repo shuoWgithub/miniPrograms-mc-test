@@ -20,6 +20,10 @@
             <text>我的关注</text>
             <image src="/images/icon_more.png"></image>
         </view>
+        <view class="module-cell" bindtap="toUpload">
+            <text>我的上传</text>
+            <image src="/images/icon_more.png"></image>
+        </view>
     </view>
     <view>
         <view class="module-cell">

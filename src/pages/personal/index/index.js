@@ -25,6 +25,11 @@ Page({
       url: "/pages/personal/follow/index?userId=" + userId
     })
   },
+  toUpload: function (e) {
+      wx.navigateTo({
+          url: "/pages/__test_upload/index"
+      })
+  },
   toInfo: function () {
     var userId = this.data.userInfo.id || 1231232132313
     wx.navigateTo({

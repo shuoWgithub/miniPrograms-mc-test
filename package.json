@@ -1,37 +1,30 @@
 {
-  "name": "weapp-boilerplate",
-  "version": "0.1.0",
-  "description": "A boilerplate application for wechat weapp runtime",
+  "name": "wxapp-redux-starter",
+  "version": "0.8.0",
+  "description": "A starter boilerplate for wxapp",
   "scripts": {
-    "lint": "gulp lint",
-    "watch": "gulp watch",
-    "generate": "gulp generate",
+    "dev": "gulp watch",
     "build": "cross-env NODE_ENV=production gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zce/weapp-boilerplate.git"
+    "url": "git+https://github.com/qixiuss/wxapp-redux-starter.git"
   },
   "keywords": [
-    "weapp",
-    "weapp",
-    "boilerplate",
+    "wxapp",
+    "redux",
+    "starter",
     "wechat",
     "weixin",
     "xiaochengxu",
-    "zce",
-    "iceStone",
-    "wedn",
-    "wedn.net",
-    "micua",
-    "micua.com"
+    "qixiuss"
   ],
-  "author": "iceStone <ice@micua.com> (https://www.micua.com/)",
+  "author": "qixiuss",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zce/weapp-boilerplate/issues"
+    "url": "https://github.com/qixiuss/wxapp-redux-starter/issues"
   },
-  "homepage": "https://github.com/zce/weapp-boilerplate#readme",
+  "homepage": "https://github.com/qixiuss/wxapp-redux-starter#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",
     "cross-env": "^3.1.3",
@@ -53,11 +46,18 @@
     "gulp-jsonminify": "^1.0.0",
     "gulp-less": "^3.1.0",
     "gulp-load-plugins": "^1.3.0",
+    "gulp-logger": "^0.0.2",
+    "gulp-newer": "^1.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "inquirer": "^1.2.2",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "glup": "^1.0.14"
   }
 }
